@@ -1,18 +1,29 @@
 package com.driver;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Gmail extends Email {
 
     int inboxCapacity; //maximum number of mails inbox can store
-    //Inbox: Stores mails. Each mail has date (Date), sender (String), message (String). It is guaranteed that message is distinct for all mails.
-    //Trash: Stores mails. Each mail has date (Date), sender (String), message (String)
+    int Inbox;  //Inbox: Stores mails. Each mail has date (Date), sender (String), message (String). It is guaranteed that message is distinct for all mails.
+    int Trash;  //Trash: Stores mails. Each mail has date (Date), sender (String), message (String)
+
+
     public Gmail(String emailId, int inboxCapacity) {
+    super(emailId);
 
     }
 
+    public Gmail(String emailId) {
+    }
+
+
     public void receiveMail(Date date, String sender, String message){
+        if(Inbox == inboxCapacity){
+        }
+        Inbox += Inbox;
         // If the inbox is full, move the oldest mail in the inbox to trash and add the new mail to inbox.
         // It is guaranteed that:
         // 1. Each mail in the inbox is distinct.
